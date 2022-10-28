@@ -1,4 +1,5 @@
 ifneq ($(AUDIO_USE_STUB_HAL), true)
+ifeq ($(TARGET_USES_QCOM_AUDIO_AR),true)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -31,4 +32,5 @@ LOCAL_SHARED_LIBRARIES := \
     libar-pal
 
 include $(BUILD_SHARED_LIBRARY)
+endif #TARGET_USES_QCOM_AUDIO_AR
 endif #AUDIO_USE_STUB_HAL
