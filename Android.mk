@@ -31,6 +31,8 @@ LOCAL_SHARED_LIBRARIES := \
     android.media.audio.common.types-V2-ndk \
     libar-pal
 
+LOCAL_HEADER_LIBRARIES := libarpal_headers
+
 include $(BUILD_SHARED_LIBRARY)
 endif #TARGET_USES_QCOM_AUDIO_AR
 endif #AUDIO_USE_STUB_HAL
